@@ -32,7 +32,7 @@ This README explains how to install, configure, and run the project locally.
 	 ```powershell
 	 cd ..\app\potluck
 	 npm install
-	 npm run web    # or: npm run start / npm run android / npm run ios
+	 npx expo start --web --clear    # or: npm run start / npm run android / npm run ios
 	 ```
 
 	 Alternatively, from `app/potluck` you can run `npx expo start` and choose the target (web, Android, iOS).
