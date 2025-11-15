@@ -1,11 +1,11 @@
 // Use initialized Firebase Admin app from config/firebase.js
-const admin = require('./config/firebase');
+const admin = require('../config/firebase');
 const express = require('express');
 const router = express.Router();
 
 
 /**
- * POST /create-user
+ * POST /create-login
  * Creates a new user in Firebase Authentication with email, username, and password.
  * Request body parameters:
  *   - email: string (required)
@@ -15,7 +15,7 @@ const router = express.Router();
  *   - 201: User created successfully (user object)
  *   - 400: Missing fields or error from Firebase
  */
-router.post('/create-user', async (req, res) => {
+router.post('/create-login', async (req, res) => {
   const { email, username, password } = req.body;
   const missingFields = [];
   if (!email) missingFields.push('Email');
